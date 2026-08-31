@@ -98,6 +98,90 @@
     width: min(380px, 32vw);
     max-height: 92vh;
     overflow-y: auto;
+  }
+
+  /* MOBILE OPTIMIZATION */
+  @media (max-width: 768px) {
+    /* Hide navbar completely */
+    .topbar {
+      display: none !important;
+    }
+
+    /* Full screen hero */
+    .hero {
+      padding: 20px 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Center brand block */
+    .brand-block {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .brand-title {
+      font-size: clamp(32px, 7vw, 56px);
+      letter-spacing: 2px;
+    }
+
+    .brand-sub {
+      font-size: clamp(12px, 2vh, 16px);
+      padding: 8px 16px;
+      margin-top: 12px;
+    }
+
+    /* Full width signup card */
+    .signup-card {
+      width: 100% !important;
+      margin-left: 0;
+      margin: 0;
+      max-height: 70vh;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .signup-card h2 {
+      font-size: 18px;
+    }
+
+    /* Form inputs fuller */
+    .signup-card input, .signup-card select {
+      width: 100% !important;
+      font-size: 16px !important;
+      padding: 12px !important;
+    }
+
+    .signup-card button {
+      width: 100%;
+      padding: 14px !important;
+      font-size: 16px !important;
+    }
+
+    .form-row {
+      flex-direction: column !important;
+    }
+
+    .form-row input {
+      width: 100% !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 16px 12px;
+    }
+
+    .brand-title {
+      font-size: clamp(28px, 6vw, 42px);
+    }
+
+    .signup-card {
+      max-height: 80vh;
+      padding: 16px;
+    }
+  }
     box-shadow: 0 8px 30px rgba(0,0,0,0.25);
   }
   .signup-card h2 { color: #223; font-size: clamp(15px, 2vh, 20px); margin-bottom: clamp(8px, 1.6vh, 16px); font-weight: 600; }
